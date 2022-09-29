@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+.App {
+    --header_height: 60px;
+    width: 1280px;
+    margin: 0 50px;
+}
+
+.hw {
+    font-family: Montserrat, sans-serif;
+}
+.hw_body{
+    display: flex;
+}
+
+.hwTitle {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    margin-left: 70px;
+    margin-top: 107px;
+    margin-bottom: 10px;
+}
