@@ -1,3 +1,7 @@
+.hw2 {
+    margin: 50px 0 50px 70px;
+}
+
 .buttonContainer {
     display: flex;
     gap: 24px;
