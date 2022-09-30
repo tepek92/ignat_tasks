@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ignat_tasks/static/css/main.032ba675.css",
-    "main.js": "/ignat_tasks/static/js/main.58842f96.js",
+    "main.css": "/ignat_tasks/static/css/main.5ab47802.css",
+    "main.js": "/ignat_tasks/static/js/main.8d477a7e.js",
     "static/js/787.66cb4309.chunk.js": "/ignat_tasks/static/js/787.66cb4309.chunk.js",
     "index.html": "/ignat_tasks/index.html",
-    "main.032ba675.css.map": "/ignat_tasks/static/css/main.032ba675.css.map",
-    "main.58842f96.js.map": "/ignat_tasks/static/js/main.58842f96.js.map",
+    "main.5ab47802.css.map": "/ignat_tasks/static/css/main.5ab47802.css.map",
+    "main.8d477a7e.js.map": "/ignat_tasks/static/js/main.8d477a7e.js.map",
     "787.66cb4309.chunk.js.map": "/ignat_tasks/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.032ba675.css",
-    "static/js/main.58842f96.js"
+    "static/css/main.5ab47802.css",
+    "static/js/main.8d477a7e.js"
   ]
 }
