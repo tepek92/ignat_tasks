@@ -14,11 +14,11 @@ export const pureAddUser = (
     addUserCallback: (name: string) => void) => {
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
 
-    if (name === '' || name[0] === ' ') {
+    if (name.trim() === '') {
         setError('Ошибка! Введите имя!');
         setName(name);
     } else {
-        addUserCallback(name);
+        addUserCallback(name.trim());
         setName('');
         setError('');
     }
@@ -26,7 +26,7 @@ export const pureAddUser = (
 
 export const pureOnBlur = (name: string, setError: Dispatch<SetStateAction<string>>) => {
     // если имя пустое - показать ошибку
-    if (name === '' || name[0] === ' ') {
+    if (name.trim() === '') {
         setError('Ошибка! Введите имя!');
     }
 }
