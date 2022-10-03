@@ -1,23 +1,28 @@
 .stand {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
+    margin-top: 90px;
+    margin-bottom: 100px;
 }
 
 .inputs {
     display: flex;
     flex-direction: column;
     gap: 48px;
+    margin-left: 70px;
 }
 
 .buttons {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    /*margin-left: 132px;*/
 }
 
 .checkboxes {
     display: flex;
     flex-direction: column;
     gap: 36px;
+    margin-right: 106px;
 }
