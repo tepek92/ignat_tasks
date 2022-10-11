@@ -46,7 +46,7 @@ export const Sidebar: FC<PropsType> = ({open, handleClose}) => {
                     </NavLink>
                     <NavLink
                         id={'hw5-junior-plus-link'}
-                        to={PATH["JUNIOR_PLUS"]}
+                        to={PATH.JUNIOR_PLUS}
                         onClick={handleClose}
                         className={(nav) => nav.isActive ? s.active : ''}
                         // делает студент
