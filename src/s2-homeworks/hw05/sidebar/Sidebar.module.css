@@ -57,6 +57,7 @@
 }
 .close {
     background-color: white;
+    border: none;
     transform: rotate(90deg);
     position: absolute;
     top: 0;
