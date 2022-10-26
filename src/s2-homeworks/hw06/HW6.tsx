@@ -12,6 +12,7 @@ import s from './HW6.module.css'
  */
 
 const HW6 = () => {
+
     const [value, setValue] = useState<string>('')
 
     const save = () => {
@@ -19,7 +20,7 @@ const HW6 = () => {
     }
     const restore = () => {
         // делают студенты
-        const newValue = restoreState('hw6-editable-span-value', value);
+        const newValue = restoreState<string>('hw6-editable-span-value', value);
         if (newValue !== null) setValue(newValue);
 
     }
