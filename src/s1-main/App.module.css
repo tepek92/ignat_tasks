@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap');
 
 .App {
     --header_height: 60px;
@@ -9,6 +9,8 @@
 
 .hw {
     font-family: Montserrat, sans-serif;
+    margin-left: 70px;
+    margin-top: 32px;
 }
 .hw_body{
     display: flex;
