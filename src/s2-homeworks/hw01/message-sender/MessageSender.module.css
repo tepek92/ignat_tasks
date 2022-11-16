@@ -14,14 +14,11 @@
 
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
     line-height: 17px;
     color: rgba(0, 0, 0, 0.6);
     opacity: 0.9;
 
-    padding-left: 15px;
-    padding-top: 10px;
+    padding: 10px;
 }
 
 textarea::placeholder {
