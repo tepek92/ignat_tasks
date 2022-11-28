@@ -11,10 +11,10 @@ const SuperRange: React.FC<SliderProps> = (props) => {
                 width: 150,
                 '& .MuiSlider-thumb': {
                     // 0 variant
-                    // height: 18,
-                    // width: 18,
-                    // backgroundColor: 'white',
-                    // border: '1px solid #00CC22'
+                    height: 18,
+                    width: 18,
+                    backgroundColor: 'white',
+                    border: '1px solid #00CC22'
 
                     // 1 variant
                     // height: 10,
@@ -23,12 +23,14 @@ const SuperRange: React.FC<SliderProps> = (props) => {
                     // boxShadow: '0 0 0 5px #fff, 0 0 0 7px #00CC22',
 
                     // 2 variant
-                    height: 18,
-                    width: 18,
-                    border: "solid 5px white",
-                    outline: "solid 2px #00CC22",
+                    // height: 18,
+                    // width: 18,
+                    // border: "solid 5px white",
+                    // outline: "solid 2px #00CC22",
 
             },
+                // 3 variant
+                '& .MuiSlider-thumb:after': { width: '6px', height: '6px', top: '50%', left: '50%', backgroundColor: '#00CC22'},
                 '& .MuiSlider-rail': {
                     backgroundColor: 'black',
                 }
