@@ -1,0 +1,6 @@
+.hw1 {
+    width: 95%;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+}

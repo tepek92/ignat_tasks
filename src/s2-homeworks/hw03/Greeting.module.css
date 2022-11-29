@@ -67,12 +67,12 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: rgba(0, 0, 0, 0.5);
+    /*color: rgba(0, 0, 0, 0.5);*/
 }
 
 .greeting {
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
-    color: #000000;
+    /*color: #000000;*/
 }

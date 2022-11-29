@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
 .friendMessage {
-    --main-background-color: white;
+    /*--main-background-color: red;*/
+    /*--main-background-color: white;*/
+    --main-background-color: inherit;
     --message-background-color: #0066CC;
     min-width: 500px;
     margin-left: 103px;
@@ -51,9 +53,12 @@
 }
 
 .friendText:after {
+    /*z-index: 4;*/
     right: -26px;
     width: 26px;
     background-color: var(--main-background-color);
+    /*background-color: inherit;*/
+    /*background-color: red;*/
     border-bottom-left-radius: 10px;
 }
 
