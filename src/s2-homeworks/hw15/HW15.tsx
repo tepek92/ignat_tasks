@@ -37,8 +37,8 @@ const sortedElements = (sort: string, techs: TechType[]) :TechType[] => {
     const up = '0'  // '0tech' '0developer'
     const down = '1' // '1tech' '1developer'
     switch (sort[0]) {
-        case up: return techs.sort((a, b) => b.id - a.id);
-        case down: return techs.sort((a, b) => a.id - b.id);
+        case up: return techs.sort((a, b) => a.id - b.id);
+        case down: return techs.sort((a, b) => b.id - a.id);
         default: return techs
     }
 
@@ -98,14 +98,15 @@ const HW15 = () => {
         setCount(+params.count || 4)
     }, [])
 
+    // sortedElements(sort, techs)
     const mappedTechs = sortedElements(sort, techs).map(t => (
         <div key={t.id} className={s.row}>
             <div id={'hw15-tech-' + t.id} className={s.tech}>
-                {t.tech}
+                {t.tech} {t.id}
             </div>
 
             <div id={'hw15-developer-' + t.id} className={s.developer}>
-                {t.developer}
+                {t.developer} {t.id}
             </div>
         </div>
     ))
