@@ -16,8 +16,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
         page, itemsCountForPage, totalCount, onChange, id = 'hw15',
     }
 ) => {
-    const lastPage = Math.floor(totalCount / itemsCountForPage) // пишет студент // вычислить количество страниц
-
+    const lastPage = Math.ceil(totalCount / itemsCountForPage) // пишет студент // вычислить количество страниц
     const arrayOptions = useMemo(() => {
         const result: {id: number, value: string}[] = [];
         for(let i = 1; i <= 10; i++) {
