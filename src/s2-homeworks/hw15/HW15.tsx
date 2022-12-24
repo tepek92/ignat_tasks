@@ -90,8 +90,8 @@ const HW15 = () => {
         setSort(newSort)
         setPage(1) // при сортировке сбрасывать на 1 страницу
 
-        sendQuery({page: page+'', count: count+''})
-        setSearchParams([['page', page+''], ['count', count+'']])
+        sendQuery({page: 1+'', count: count+''})
+        setSearchParams([['page', 1+''], ['count', count+'']])
 
         //
     }
@@ -107,11 +107,11 @@ const HW15 = () => {
     const mappedTechs = sortedElements(sort, techs).map(t => (
         <div key={t.id} className={s.row}>
             <div id={'hw15-tech-' + t.id} className={s.tech}>
-                {t.id} {t.tech}
+                {t.id}
             </div>
 
             <div id={'hw15-developer-' + t.id} className={s.developer}>
-                {t.id} {t.developer}
+                {t.id}
             </div>
         </div>
     ))
