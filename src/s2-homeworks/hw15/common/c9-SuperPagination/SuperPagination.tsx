@@ -33,8 +33,6 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
 
     const onChangeSelect = (event: ChangeEvent<HTMLSelectElement>) => {
         // пишет студент
-        // let currentLastPage = Math.floor(totalCount / +event.currentTarget.value);
-        // currentLastPage = lastPage > currentLastPage ? currentLastPage : lastPage
         onChange(1, +event.currentTarget.value)
     }
 
@@ -50,22 +48,21 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                 onChange={onChangeCallback}
                 hideNextButton
                 hidePrevButton
+                shape="rounded"
+                color="primary"
+                size="small"
             />
 
             <span className={s.text1}>
-                показать
+                Показать
             </span>
 
             <SuperSelect
                 id={id + '-pagination-select'}
                 value={itemsCountForPage}
-                // options={[
-                //     {id: 4, value: 4},
-                //     {id: 7, value: 7},
-                //     {id: 10, value: 10},
-                // ]}
                 options={arrayOptions}
                 onChange={onChangeSelect}
+                style={{width: ''}}
             />
 
             <span className={s.text2}>

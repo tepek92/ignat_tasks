@@ -37,6 +37,7 @@ const HW7 = () => {
                             options={arr}
                             value={value}
                             onChangeOption={onChangeOption}
+                            style={{width: '165px'}}
                         />
                     </div>
                     <div>

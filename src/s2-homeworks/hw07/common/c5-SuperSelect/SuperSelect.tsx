@@ -4,7 +4,6 @@ import React, {
     ChangeEvent,
 } from 'react'
 import s from './SuperSelect.module.css'
-import {dblClick} from "@testing-library/user-event/dist/click";
 import {ArrType} from "../../HW7";
 
 type DefaultSelectPropsType = DetailedHTMLProps<

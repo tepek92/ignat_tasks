@@ -5,6 +5,7 @@ import axios, {AxiosResponse} from 'axios'
 import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort'
+import {Loader} from "../hw10/Loader";
 
 /*
 * 1 - дописать SuperPagination
@@ -20,7 +21,7 @@ type TechType = {
     tech: string
     developer: string
 }
-type GetParamsType = {page: string, count: string, sort: string};
+type GetParamsType = { page: string, count: string, sort: string };
 
 const getTechs = (params: GetParamsType) => {
     return axios
@@ -31,22 +32,6 @@ const getTechs = (params: GetParamsType) => {
         .catch((e) => {
             alert(e.response?.data?.errorText || e.message)
         })
-}
-
-const sortedElements = (sort: string, techs: TechType[]) :TechType[] => {
-    const up = '0'  // '0tech' '0developer'
-    const down = '1' // '1tech' '1developer'
-    const result = [...techs];
-    switch (sort[0]) {
-        case up:
-            result.sort((a, b) => a.id - b.id);
-            return result
-        case down:
-             result.sort((a, b) => b.id - a.id);
-            return result
-        default: return techs
-    }
-
 }
 
 const HW15 = () => {
@@ -74,26 +59,20 @@ const HW15 = () => {
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
-
         setPage(newPage)
         setCount(newCount)
 
-        sendQuery({page: newPage+'', count: newCount+'', sort});
-        setSearchParams([['page', newPage+''], ['count', newCount+'']])
-
-        //
+        sendQuery({page: newPage + '', count: newCount + '', sort});
+        setSearchParams([['page', newPage + ''], ['count', newCount + '']])
     }
 
     const onChangeSort = (newSort: string) => {
         // делает студент
-
         setSort(newSort)
         setPage(1) // при сортировке сбрасывать на 1 страницу
 
-        sendQuery({page: 1+'', count: count+'', sort: newSort})
-        setSearchParams([['page', 1+''], ['count', count+'']])
-
-        //
+        sendQuery({page: 1 + '', count: count + '', sort: newSort})
+        setSearchParams([['page', 1 + ''], ['count', count + '']])
     }
 
     useEffect(() => {
@@ -103,7 +82,6 @@ const HW15 = () => {
         setCount(+params.count || 4)
     }, [])
 
-    // sortedElements(sort, techs)
     const mappedTechs = techs.map(t => (
         <div key={t.id} className={s.row}>
             <div id={'hw15-tech-' + t.id} className={s.tech}>
@@ -120,8 +98,11 @@ const HW15 = () => {
         <div id={'hw15'}>
             <div className={s2.hwTitle}>Homework №15</div>
             <hr/>
-            <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
+            <div className={s2.hw + ' ' + s.container}>
+                {idLoading &&
+                    <div id={'hw15-loading'} className={s.loading}>
+                        <Loader/>
+                    </div>}
 
                 <SuperPagination
                     page={page}

@@ -1,9 +1,13 @@
 import React from 'react'
+import downIcon from '../../img/arrow_down.png'
+import upIcon from '../../img/arrow_up.png'
+import noneIcon from '../../img/arrow_default.png'
+import s from './SuperSort.module.css'
 
 // добавить в проект иконки и импортировать
-const downIcon = '[\\/]'
-const upIcon = '[/\\]'
-const noneIcon = '[--]'
+// const downIcon = '[\\/]'
+// const upIcon = '[/\\]'
+// const noneIcon = '[--]'
 
 export type SuperSortPropsType = {
     id?: string
@@ -44,15 +48,17 @@ const SuperSort: React.FC<SuperSortPropsType> = (
     return (
         <span
             id={id + '-sort-' + value}
+            className={s.icon}
             onClick={onChangeCallback}
         >
             {/*сделать иконку*/}
-            {/*<img*/}
-            {/*    id={id + '-icon-' + sort}*/}
-            {/*    src={icon}*/}
-            {/*/>*/}
+            <img
+                id={id + '-icon-' + sort}
+                src={icon}
+                alt={'icon'}
+            />
 
-            {icon} {/*а это убрать*/}
+            {/*{icon} /!*а это убрать*!/*/}
         </span>
     )
 }
