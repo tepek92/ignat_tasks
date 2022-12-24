@@ -20,7 +20,7 @@ type TechType = {
     tech: string
     developer: string
 }
-type GetParamsType = {page: string, count: string};
+type GetParamsType = {page: string, count: string, sort: string};
 
 const getTechs = (params: GetParamsType) => {
     return axios
@@ -65,8 +65,6 @@ const HW15 = () => {
                 // делает студент
                 // сохранить пришедшие данные
                 if (res) {
-                    console.log(res.data)
-
                     setTechs(res.data.techs)
                     setTotalCount(res.data.totalCount)
                     setLoading(false)
@@ -80,7 +78,7 @@ const HW15 = () => {
         setPage(newPage)
         setCount(newCount)
 
-        sendQuery({page: newPage+'', count: newCount+''});
+        sendQuery({page: newPage+'', count: newCount+'', sort});
         setSearchParams([['page', newPage+''], ['count', newCount+'']])
 
         //
@@ -92,7 +90,7 @@ const HW15 = () => {
         setSort(newSort)
         setPage(1) // при сортировке сбрасывать на 1 страницу
 
-        sendQuery({page: 1+'', count: count+''})
+        sendQuery({page: 1+'', count: count+'', sort: newSort})
         setSearchParams([['page', 1+''], ['count', count+'']])
 
         //
@@ -100,13 +98,13 @@ const HW15 = () => {
 
     useEffect(() => {
         const params = Object.fromEntries(searchParams)
-        sendQuery({page: params.page, count: params.count})
+        sendQuery({page: params.page, count: params.count, sort})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
     }, [])
 
     // sortedElements(sort, techs)
-    const mappedTechs = sortedElements(sort, techs).map(t => (
+    const mappedTechs = techs.map(t => (
         <div key={t.id} className={s.row}>
             <div id={'hw15-tech-' + t.id} className={s.tech}>
                 {t.tech}
