@@ -107,11 +107,11 @@ const HW15 = () => {
     const mappedTechs = sortedElements(sort, techs).map(t => (
         <div key={t.id} className={s.row}>
             <div id={'hw15-tech-' + t.id} className={s.tech}>
-                {t.id}
+                {t.tech}
             </div>
 
             <div id={'hw15-developer-' + t.id} className={s.developer}>
-                {t.id}
+                {t.developer}
             </div>
         </div>
     ))
