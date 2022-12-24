@@ -33,6 +33,17 @@ const getTechs = (params: GetParamsType) => {
         })
 }
 
+const sortedElements = (sort: string, techs: TechType[]) :TechType[] => {
+    const up = '0'  // '0tech' '0developer'
+    const down = '1' // '1tech' '1developer'
+    switch (sort[0]) {
+        case up: return techs.sort((a, b) => b.id - a.id);
+        case down: return techs.sort((a, b) => a.id - b.id);
+        default: return techs
+    }
+
+}
+
 const HW15 = () => {
     const [sort, setSort] = useState('')
     const [page, setPage] = useState(1)
@@ -87,7 +98,7 @@ const HW15 = () => {
         setCount(+params.count || 4)
     }, [])
 
-    const mappedTechs = techs.map(t => (
+    const mappedTechs = sortedElements(sort, techs).map(t => (
         <div key={t.id} className={s.row}>
             <div id={'hw15-tech-' + t.id} className={s.tech}>
                 {t.tech}
